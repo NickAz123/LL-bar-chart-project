@@ -6,14 +6,121 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bar Chart Project</title>
+  <link rel="stylesheet" href="css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="javascript/script.js"></script>
+  <script src="javascript/scripts.js"></script>
 </head>
 
 <body>
-  <div>
 
-  </div>
+  <section id="headerbox">
+    <h1>BAR CHART PROJECT</h1>
+  </section>
+  <section id="mainarea">
+
+    <div class="col1">
+      <div class="optionsbox">
+
+        <form id = "allData">
+          <h2>Title Options</h2>
+          <label for="graphtitle" id="boxtitles">Graph Title</label>
+          <input type="text" id="graphtitle" class="databox"><br>
+
+          <label for="titlecolor" id="boxtitles">Title Color</label>
+          <input type="color" id="titlecolor" class="databox"><br>
+
+          <label for="titlesize" id="boxtitles">Title Size</label>
+          <select id="titlesize">
+            <option value="smalltitle">Small</option>
+            <option value="mediumtitle">Medium</option>
+            <option value="largetitle">Large</option>
+            <option value="xlargetitle">X-Large</option>
+          </select>
+
+          <h2>Bar Options</h2>
+          <bardivs id="bardivs">
+            <label for="bar1name" id="boxtitles">Bar 1 Name</label>
+            <input type="text" id="bar1name" class="databox">
+            <label for="bar1color" id="boxtitles">Color</label>
+            <input type="color" id="bar1color" class="databox"><br>
+            <label for="bar1amount" id="boxtitles">Bar 1 Amount</label>
+            <input type="number" id="bar1amount" class="databox"><br>
+          </bardivs>
+          <bardivs id="bardivs">
+            <label for="bar2name" id="boxtitles">Bar 2 Name</label>
+            <input type="text" id="bar2name" class="databox">
+            <label for="bar2color" id="boxtitles">Color</label>
+            <input type="color" id="bar2color" class="databox"><br>
+            <label for="bar2amount" id="boxtitles">Bar 2 Amount</label>
+            <input type="number" id="bar2amount" class="databox"><br>
+          </bardivs>
+          <bardivs id="bardivs">
+            <label for="bar3name" id="boxtitles">Bar 3 Name</label>
+            <input type="text" id="bar3name" class="databox">
+            <label for="bar3color" id="boxtitles">Color</label>
+            <input type="color" id="bar3color" class="databox"><br>
+            <label for="bar3amount" id="boxtitles">Bar 3 Amount</label>
+            <input type="number" id="bar3amount" class="databox"><br>
+          </bardivs>
+          <bardivs id="bardivs">
+            <label for="bar4name" id="boxtitles">Bar 4 Name</label>
+            <input type="text" id="bar4name" class="databox">
+            <label for="bar4color" id="boxtitles">Color</label>
+            <input type="color" id="bar4color" class="databox"><br>
+            <label for="bar4amount" id="boxtitles">Bar 4 Amount</label>
+            <input type="number" id="bar4amount" class="databox"><br>
+          </bardivs>
+          <bardivs id="bardivs">
+            <label for="bar5name" id="boxtitles">Bar 5 Name</label>
+            <input type="text" id="bar5name" class="databox">
+            <label for="bar5color" id="boxtitles">Color</label>
+            <input type="color" id="bar5color" class="databox"><br>
+            <label for="bar5amount" id="boxtitles">Bar 5 Amount</label>
+            <input type="number" id="bar5amount" class="databox"><br>
+          </bardivs>
+          <button type="button" id="generatebars">Generate</button><br>
+          <bardivs id="bardivs">
+            <label for="yaxisname" id="boxtitles">Y Axis Name</label>
+            <input type="text" id="yaxisname" class="databox">
+            <button type="button" id="generatey">Change</button><br>
+            <label for="xaxisname" id="boxtitles">X Axis Name</label>
+            <input type="text" id="xaxisname" class="databox">
+            <button type="button" id="generatex">Change</button><br>
+          </bardivs>
+        </form>
+
+      </div>
+
+
+    </div>
+
+    <div class="col2">
+      <h3>Graph Name</h3>
+
+      <div id="graphbox">
+        <article class = "graphactual">
+          <div>
+            <p id = "bar1text">Bar 1<span></span><span class = "graphactual"></span></p>
+          </div>
+          <div>
+            <p id = "bar2text">Bar 2<span></span><span class = "graphactual"></span></p>
+          </div>
+          <div>
+            <p id = "bar3text"> Bar 3<span></span><span class = "graphactual"></span></p>
+          </div>
+          <div>
+            <p id = "bar4text">Bar 4<span></span><span class = "graphactual"></span></p>
+          </div>
+          <div>
+            <p id = "bar5text">Bar 5<span></span><span class = "graphactual"></span></p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+  </section>
+
 </body>
 
 </html>
