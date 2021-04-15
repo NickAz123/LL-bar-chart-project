@@ -7,6 +7,7 @@ $("document").ready(function () {
 
 //MAIN FUNCTION
 let generateChart = function (ev) {
+  //These functions take form information and store them in key value pairs in an object
   let data = Array.from(document.querySelectorAll('.databox')).reduce((acc, input) => ({ ...acc, [input.id]: input.value }), {});
   let options = Array.from(document.querySelectorAll('.databox2')).reduce((acc, input) => ({ ...acc, [input.id]: input.value }), {});
   let element = Array.from(document.querySelectorAll("#bars"));
@@ -24,7 +25,7 @@ let drawBarChart = function (data, options, element) {
     maximum = 100;
   }
 
-  //Set Graph Titles
+  //Set Graph Title Options
   $("h3").contents()[0].textContent = options.graphtitle;
   $("h3").css("color", options.titlecolor);
 
@@ -40,7 +41,6 @@ let drawBarChart = function (data, options, element) {
   if($("#titlesize").val()==="xlargetitle"){
     $("h3").css("font-size", "100px");
   }
-
 
   //Set Bar Names
   $("#bar1text").contents()[0].textContent = data.bar1name;
@@ -62,4 +62,11 @@ let drawBarChart = function (data, options, element) {
   $("#bar3text span:nth-child(2)").css("background-color", options.bar3color);
   $("#bar4text span:nth-child(2)").css("background-color", options.bar4color);
   $("#bar5text span:nth-child(2)").css("background-color", options.bar5color);
+
+  //Set Bar Heights
+  $("#bar1text").animate({"height": options.bar1height + "px"});
+  $("#bar2text").animate({"height": options.bar2height + "px"});
+  $("#bar3text").animate({"height": options.bar3height + "px"});
+  $("#bar4text").animate({"height": options.bar4height + "px"});
+  $("#bar5text").animate({"height": options.bar5height + "px"});
 }
