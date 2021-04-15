@@ -24,6 +24,24 @@ let drawBarChart = function (data, options, element) {
     maximum = 100;
   }
 
+  //Set Graph Titles
+  $("h3").contents()[0].textContent = options.graphtitle;
+  $("h3").css("color", options.titlecolor);
+
+  if($("#titlesize").val()==="smalltitle"){
+    $("h3").css("font-size", "30px");
+  }
+  if($("#titlesize").val()==="mediumtitle"){
+    $("h3").css("font-size", "60px");
+  }
+  if($("#titlesize").val()==="largetitle"){
+    $("h3").css("font-size", "80px");
+  }
+  if($("#titlesize").val()==="xlargetitle"){
+    $("h3").css("font-size", "100px");
+  }
+
+
   //Set Bar Names
   $("#bar1text").contents()[0].textContent = data.bar1name;
   $("#bar2text").contents()[0].textContent = data.bar2name;
@@ -31,7 +49,7 @@ let drawBarChart = function (data, options, element) {
   $("#bar4text").contents()[0].textContent = data.bar4name;
   $("#bar5text").contents()[0].textContent = data.bar5name;
 
-  //Set Bar Values
+  //Set Bar Values w/ animation
   $("#bar1text span:nth-child(2)").animate({"width": ((data.bar1amount / maximum) * 100) + "%"})
   $("#bar2text span:nth-child(2)").animate({"width": ((data.bar2amount / maximum) * 100) + "%"});
   $("#bar3text span:nth-child(2)").animate({"width": ((data.bar3amount / maximum) * 100) + "%"});
