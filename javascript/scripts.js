@@ -1,7 +1,6 @@
 //DOCUMENT TRIGGERS
 $("document").ready(function () {
   $("#generatebars").on("click", generateChart);
-  // $("#generate").on("click", printGraph);
   console.log("ready")
 })
 
@@ -41,6 +40,10 @@ let drawBarChart = function (data, options, element) {
   if($("#titlesize").val()==="xlargetitle"){
     $("h3").css("font-size", "100px");
   }
+
+  //Set Graph Axis
+  $("h4").contents()[0].textContent = options.yaxisname;
+  $("h5").contents()[0].textContent = options.xaxisname;
 
   //Set Bar Names
   $("#bar1text").contents()[0].textContent = data.bar1name;
